@@ -1,0 +1,174 @@
+html {
+  scroll-behavior: smooth; /* Hace que el desplazamiento sea fluido y animado */
+}
+
+/* 1. Reset básico y tipografía general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* 2. Encabezado principal */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #111111;
+}
+
+/* 3. Secciones generales */
+section {
+  max-width: 800px;
+  margin: 0 auto 30px auto; /* Centra el contenido en la pantalla */
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 5px;
+}   
+/* 4. Contenedor flexible de proyectos */
+.contenedor-proyectos {
+  display: flex;
+  gap: 20px; /* Espacio entre cada tarjeta */
+  flex-wrap: wrap; /* Si la pantalla es pequeña, baja la siguiente tarjeta */
+}
+
+/* 5. Estilo individual de cada tarjeta */
+.tarjeta-proyecto {
+  flex: 1; /* Hace que ambas tarjetas tengan el mismo ancho */
+  min-width: 250px; /* Evita que se encojan demasiado */
+  border: 1px solid #e0e0e0;
+  padding: 16px;
+  border-radius: 6px;
+  background-color: #fafafa;
+}
+
+.tarjeta-proyecto h3 {
+  margin-bottom: 10px;
+  color: #222222;
+}
+
+.tarjeta-proyecto p {
+  margin-bottom: 16px;
+  color: #666666;
+  font-size: 0.95rem;
+}
+
+/* 6. Convertir el enlace en un botón */
+.boton-proyecto {
+  display: inline-block;
+  text-decoration: none; /* Quita el subrayado azul feo por defecto */
+  background-color: #0070f3;
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.boton-proyecto:hover {
+  background-color: #0051bb; /* Cambia a un azul más oscuro al pasar el mouse */
+}
+
+/* 7. Lista de habilidades */
+.lista-habilidades {
+  list-style: none; /* Elimina los puntos negros por defecto */
+  display: flex;
+  flex-wrap: wrap; /* Pasa a la siguiente línea si no caben */
+  gap: 10px; /* Separación entre cada etiqueta */
+}
+
+.lista-habilidades li {
+  background-color: #e2e8f0;
+  color: #1a202c;
+  padding: 6px 14px;
+  border-radius: 20px; /* Hace los bordes completamente redondeados (forma de pastilla) */
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+/* 8. Foto de perfil */
+.foto-perfil {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%; /* La hace perfectamente circular */
+  object-fit: cover; /* Evita que la foto se deforme o estire */
+  margin-bottom: 15px;
+  border: 3px solid #0070f3; /* Borde de color alrededor */
+}
+
+/* 9. Sección de contacto y enlaces */
+footer {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.redes-contacto {
+  display: flex;
+  justify-content: center; /* Centra los botones horizontalmente */
+  gap: 15px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.enlace-contacto {
+  text-decoration: none;
+  color: #0070f3;
+  font-weight: bold;
+  padding: 8px 16px;
+  border: 1px solid #0070f3;
+  border-radius: 4px;
+}
+
+.enlace-contacto:hover {
+  background-color: #0070f3;
+  color: #ffffff;
+}
+
+/* 10. Barra de navegación */
+.barra-navegacion {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 12px 0;
+  position: sticky; /* Se queda fija arriba cuando bajas en la página */
+  top: 0;
+  z-index: 100;
+  margin-bottom: 30px;
+}
+
+.barra-navegacion ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.barra-navegacion a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.barra-navegacion a:hover {
+  color: #0070f3;
+}
