@@ -148,8 +148,8 @@ footer {
 .barra-navegacion {
   background-color: #ffffff;
   border-bottom: 1px solid #e0e0e0;
-  padding: 12px 0;
-  position: sticky; /* Se queda fija arriba cuando bajas en la página */
+  padding: 12px 15px;
+  position: sticky;
   top: 0;
   z-index: 100;
   margin-bottom: 30px;
@@ -158,8 +158,18 @@ footer {
 .barra-navegacion ul {
   list-style: none;
   display: flex;
-  justify-content: center;
+  justify-content: center; /* En PC se centra */
   gap: 25px;
+  overflow-x: auto; /* Permite deslizar horizontalmente si no cabe */
+  white-space: nowrap; /* Evita que el texto de un enlace se corte en dos líneas */
+  -webkit-overflow-scrolling: touch; /* Hace que el deslizamiento en iPhone sea suave */
+}
+
+/* Regla especial para celulares */
+@media (max-width: 600px) {
+  .barra-navegacion ul {
+    justify-content: flex-start; /* En celular alinea a la izquierda para poder deslizar */
+  }
 }
 
 .barra-navegacion a {
