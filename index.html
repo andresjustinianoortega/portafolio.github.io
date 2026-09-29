@@ -68,9 +68,18 @@
   <footer id="contacto">
     <h2>Contacto</h2>
     <p>¿Te interesa colaborar en algún proyecto? Escríbeme:</p>
+
+    <!-- Formulario de Formspree -->
+    <form action="https://formspree.io/f/xvkglbeq" method="POST" class="formulario-contacto">
+      <input type="text" name="name" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo electrónico" required>
+      <textarea name="message" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+      <button type="submit" class="boton-enviar">Enviar Mensaje</button>
+    </form>
+
     <div class="redes-contacto">
       <a href="mailto:tu-correo@ejemplo.com" class="enlace-contacto">Enviar Correo</a>
-      <a href="https://github.com/tu-usuario" target="_blank" class="enlace-contacto">GitHub</a>
+      <a href="https://github.com/andresjustinianoortega" target="_blank" class="enlace-contacto">GitHub</a>
       <a href="https://linkedin.com/in/tu-usuario" target="_blank" class="enlace-contacto">LinkedIn</a>
     </div>
   </footer>
