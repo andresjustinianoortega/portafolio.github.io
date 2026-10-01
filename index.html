@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio Personal</title>
   <link rel="stylesheet" href="style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -20,13 +24,13 @@
 
   <!-- Encabezado con foto -->
   <header>
-    <img src="perfil.jpg.jpg" alt="Foto de perfil" class="foto-perfil">
+    <img src="foto_de_perfil.jpg" alt="Foto de perfil" class="foto-perfil">
     <h1>ANDRES IGNACIO JUSTINIANO ORTEGA</h1>
     <p>Ingeniero Electrónico</p>
   </header>
 
   <!-- Sección Sobre Mí -->
-  <section id="sobre-mi">
+  <section id="sobre-mi animar-scroll">
     <h2>DESCRIPCIÓN</h2>
     <p>Ingeniero electrónico recien egresado con experiencia tanto academica como profesional en entornos industriales de produccion y fabricación.</p>
   </section>
@@ -34,7 +38,7 @@
   <!-- Sección Habilidades -->
   <section id="habilidades">
     <h2>HABILIDADES TECNICAS</h2>
-    <ul class="lista-habilidades">
+    <ul class="lista-habilidades animar-scroll">
       <li>Proteus</li>
       <li>Power BI</li>
       <li>Microsoft Excel</li>
@@ -54,21 +58,21 @@
     
     <div class="contenedor-proyectos">
       
-      <article class="tarjeta-proyecto">
+      <article class="tarjeta-proyecto animar-scroll">
         <h3>Asistente para diagnóstico médico con IA</h3>
         <p>Implementacion y diseño de un asistente para diagnostico medico utilizando inteligencia artificial.</p>
-        <a href="#" class="boton-proyecto">Ver proyecto</a>
+        <a href="proyecto_asistente.html" class="boton-demo">Ver Proyecto</a>
       </article>
 
-      <article class="tarjeta-proyecto">
+      <article class="tarjeta-proyecto animar-scroll">
         <h3>Sistema de control y monitoreo de temperatura</h3>
         <p>Sistema para controlar y monitorear la temperatura de la placa de potencia de una máquina</p>
         <a href="#" class="boton-proyecto">Ver proyecto</a>
       </article>
 
-      <article class="tarjeta-proyecto">
+      <article class="tarjeta-proyecto animar-scroll">
         <h3>Brazo robótico</h3>
-        <p>Brazo mecanizado para realizar tareas de manipulación de objetos livianos</p>
+        <p>Brazo mecanizado para realizar tareas de manipulación de objetos livianos.</p>
         <a href="#" class="boton-proyecto">Ver proyecto</a>
       </article>
 
@@ -76,7 +80,7 @@
   </section>
 
   <!-- Contacto -->
-  <footer id="contacto">
+  <footer id="contacto animar-scroll">
     <h2>CONTACTO</h2>
     <p>¿Te interesa colaborar en algún proyecto? Escríbeme:</p>
 
@@ -88,11 +92,24 @@
       <button type="submit" class="boton-enviar">Enviar Mensaje</button>
     </form>
 
-    <div class="redes-contacto">
+    <div class="redes-contacto animar-scroll">
       <a href="https://github.com/andresjustinianoortega" target="_blank" class="enlace-contacto">GitHub</a>
       <a href="https://www.linkedin.com/in/andresignaciojustinianoortega/?isSelfProfile=true" target="_blank" class="enlace-contacto">LinkedIn</a>
     </div>
   </footer>
+  
+  <script>
+  const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add('visible'); // Aparece al llegar a él
+      }
+    });
+  }, { threshold: 0.1 }); // Se activa cuando se asoma un 10% del elemento
+
+  // Le aplica el observador a todo lo que tenga la clase .animar-scroll
+  document.querySelectorAll('.animar-scroll').forEach((el) => observador.observe(el));
+</script>
 
 </body>
 </html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto 1 | Detalle</title>
+  <!-- Reutilizamos tu mismo archivo de estilos -->
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">  
+</head>
+<body>
+
+  <!-- Contenedor central -->
+  <main class="contenedor-principal" style="max-width: 800px; margin: 40px auto; padding: 20px;">
+    
+    <!-- Botón para regresar al inicio -->
+    <a href="index.html" class="boton-demo">Volver al inicio</a>
+
+    <h1>ASISTENTE PARA DIAGNÓSTICO MÉDICO CON INTELIGENCIA ARTIFICIAL</h1>
+
+    <h2>Resumen del proyecto</h2>
+    <p style="line-height: 1.6; margin-bottom: 16px; text-align: justify;">
+      Las salas de emergencia de los hospitales públicos de Bolivia tiende a saturarse. Un sistema
+      de salud fragil, largas filas, alta demanda de atención y lescasez de personal generan 
+      inconvenientes en el tratamiento de los pacientes.
+    </p>
+    <p style="line-height: 1.6; margin-bottom: 16px; text-align: justify;">
+      El presente proyecto tiene como objetivo el desarrollo de un asistente para optimizar la 
+      atención mediante inteligencia artificial realiza diagnósticos médicos en base a información 
+      que proveen los pacientes.
+    </p>
+
+    <h2>Tecnologías utilizadas</h2>
+    <ul style="line-height: 1.8; margin-bottom: 24px;">
+      <li>Raspberry Pi</li>
+      <li>Python</li>
+      <li>Proteus</li>
+      <li>Fusion 360</li>
+      <li>Tkinter</li>
+      <li>SQLite</li>
+      <li>Electrónica analógica y digital</li>
+    </ul>
+
+  <!-- 1. Diseño 3D -->
+    <section class="seccion-detalle animar-scroll">
+      <h2>Diseño 3D y Estructura</h2>
+      <p text-align: justify;>
+        El modelado se realizo usando Fusion 360. Se tomo en cuenta la ergonomía, facilidad de ensamblaje y dimensiones de los componentes electrónicos internos. Una vez finalizado el diseño, se imprimió en 3D usando filamento ABS, debido a su resistencia y durabilidad. Por ultimo, se realizaron pruebas de ensamblaje y ajustes finales para asegurar un encaje perfecto de todos los componentes.
+      </p>
+      <div class="galeria-fotos animar-scroll">
+        <img src="diseño3d.jpeg" alt="Render del chasis 3D" class="img-detalle">
+        <img src="impresion3d.jpeg" alt="Detalle de ensamblaje en software CAD" class="img-detalle">
+      </div>
+    </section>
+
+    <!-- 2. Placa Electrónica y Componentes -->
+    <section class="seccion-detalle animar-scroll">
+      <h2>Placa Electrónica y Circuitos</h2>
+      <p text-align: justify;>
+        El diseño esquemático y PCB se realizaron con el software Proteus. Se realizó una previa selección de componentes de sensado, adaptación de señal, 
+        microcontroladores y etapas de filtrado para una lectura precisa de los datos. Se evaluó y se acondicionó el circuito para que funcione y se integre de la forma mas óptima al sistema.
+      </p>
+      <div class="galeria-fotos animar-scroll">
+        <img src="pcb.png" alt="Diseño esquemático de la PCB" class="img-detalle">
+        <img src="pcb3d.png" alt="Placa electrónica en 3D" class="img-detalle">
+      </div>
+    </section>
+
+    <!-- 3. Armado e Integración -->
+    <section class="seccion-detalle animar-scroll">
+      <h2>Componentes seleccionados</h2>
+      <p text-align: justify;>
+        Se seleccionó los componentes necesarios para un correcto y acertado funcionamiento del sistema.
+        Tambien se tomo en cuenta la compatibilidad para el cableado interno y montaje de los mismos dentro del prototipo.
+        Dentro de esos componentes resaltan: sensor de temperatura, de ritmo cardiaco, Raspberry Pi, convertidor analogico-digital, filtro de señal y la pantalla de visualización.
+      </p>
+      <div class="galeria-fotos">
+        <img src="https://www.elecrow.com/media/catalog/product/cache/b6b9577937e6a96f50e53ddc42983628/r/a/raspberry_pi_4_model_b-4gb_ram_1.jpg" alt="Rasspberry Pi" class="img-detalle">
+        <img src="https://www.tiendatec.es/4373-large_default/mcp3008-ip-conversor-adc-8-canales-10-bits-spi.jpg" alt="Convertidor ADC" class="img-detalle">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZbqSBU_V7f4f3iAa0Kl7-8_yijAoRnWlBgs1nf2GkvRVHA0izx0TEKNFc&s=10" alt="Convertidor ADC" class="img-detalle">
+        <img src="https://novatronicec.com/wp-content/uploads/2020/10/Sensor-de-Pulso-Cardiaco_3.jpg.webp" alt="Convertidor ADC" class="img-detalle">    
+      </div>
+    </section>
+
+    <!-- Descarga de Documentación -->
+    <section class="seccion-descarga">
+      <h2>Documentación Completa</h2>
+      <a href="documentacion_proyecto.pdf" download class="boton-proyecto">
+        Descargar
+      </a>
+    </section>
+
+      <script>
+    const observador = new IntersectionObserver((entradas) => {
+      entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add('visible'); // Aparece al llegar a él
+        }
+      });
+    }, { threshold: 0.1 }); // Se activa cuando se asoma un 10% del elemento
+
+    // Le aplica el observador a todo lo que tenga la clase .animar-scroll
+    document.querySelectorAll('.animar-scroll').forEach((el) => observador.observe(el));
+  </script>
+
+  </main>
+
+</body>
+</html>
