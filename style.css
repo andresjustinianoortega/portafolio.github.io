@@ -9,6 +9,10 @@ html {
   box-sizing: border-box;
 }
 
+h1 {
+  margin-top: 25px;
+}
+
 body {
   font-family: 'Nunito', system-ui, -apple-system, sans-serif;
   background-color: #f4f4f9;

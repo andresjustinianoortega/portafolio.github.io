@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de control y monitoreo de temperatura</title>
+  <!-- Reutilizamos tu mismo archivo de estilos -->
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">  
+</head>
+<body>
+
+  <!-- Contenedor central -->
+  <main class="contenedor-principal" style="max-width: 800px; margin: 40px auto; padding: 20px;">
+    
+    <!-- Botón para regresar al inicio -->
+    <a href="index.html" class="boton-demo">Volver al inicio</a>
+
+    <h1>SISTEMA DE CONTROL Y MONITOREO DE TEMPERATURA DE LA MAQUINA LIEBHERR</h1>
+
+    <h2>Resumen del proyecto</h2>
+    <p style="line-height: 1.6; margin-bottom: 16px; text-align: justify;">
+      La máquina LIEBHERR es una recogedora de chatarra que funciona en la siderúrgica de LAS LOMAS.
+      Debido a su constante uso, la placa de potencia de la máquina tiende a sobrecalentarse, lo que 
+      genera fallas en el sistema y posibles interrupciones al funcionamiento de la planta.
+    </p>
+    <p style="line-height: 1.6; margin-bottom: 16px; text-align: justify;">
+      Por ello, el presente proyecto tiene como objetivo el desarrollo de un sistema para el control y
+      el monitoreo atraves de un sensor de temperatura, que permita mantener la placa de potencia 
+      dentro de un rango seguro de funcionamiento y evitar daños al sistema, dando aviso al operador
+      cuando se este presentando un sobrecalentamiento.
+    </p>
+
+    <h2>Tecnologías utilizadas</h2>
+    <ul style="padding-left: 20px; line-height: 1.8; margin-bottom: 24px;">
+      <li>ESP32 LOLIN Lite</li>
+      <li>Python</li>
+      <li>Proteus</li>
+      <li>Fusion 360</li>
+      <li>Tkinter</li>
+      <li>Componentes Electrónicos.</li>
+    </ul>
+
+  <!-- 1. Diseño 3D -->
+    <section class="seccion-detalle animar-scroll">
+      <h2>Diseño 3D y Estructura</h2>
+      <p style="text-align: justify;">
+        El modelado se realizo usando Fusion 360. Se tomo en cuenta la facilidad de 
+        ensamblaje, dimensiones de los componentes electrónicos y la implementación de 
+        una bateria de manera interna. Una vez finalizado el diseño, se imprimió en 3D y 
+        se realizaron pruebas de ensamblaje y ajustes finales para asegurar un encaje perfecto 
+        de todos los componentes, ademas de una buena resistencia a las condiciones en las 
+        cuales estara operando.
+      </p>
+      <div class="galeria-fotos animar-scroll">
+        <img src="diseño3d_liebherr.jpeg" alt="Render del chasis 3D" class="img-detalle">
+        <img src="impresion3d_liebherr.jpg" alt="Detalle de ensamblaje en software CAD" class="img-detalle">
+      </div>
+    </section>
+
+    <!-- 2. Placa Electrónica y Componentes -->
+    <section class="seccion-detalle animar-scroll">
+      <h2>Placa Electrónica y Circuitos</h2>
+      <p style="text-align: justify;">
+        El diseño esquemático y PCB se realizaron con el software Proteus. Se realizó una selección 
+        cuidadosa de componentes en base a lo que el sistema requiere, ademas de la compatibilidad 
+        de los mismos para el cableado interno y montaje dentro del prototipo. Luego, se imprimió la 
+        placa y se realizaron pruebas de funcionamiento y ajustes finales para asegurar un correcto
+        y acertado funcionamiento del sistema.
+      </p>
+      <div class="galeria-fotos animar-scroll">
+        <img src="pcb_liebherr.png" alt="Diseño esquemático de la PCB" class="img-detalle">
+        <img src="placa_liebherr.jpeg" alt="Placa electrónica en 3D" class="img-detalle">
+      </div>
+    </section>
+
+    <!-- 3. Armado e Integración -->
+    <section class="seccion-detalle animar-scroll">
+      <h2>Componentes seleccionados</h2>
+      <p style="text-align: justify;">
+        Se seleccionaron los componentes necesarios para poder procesar toda la informacion del sistema
+        y generar un aviso al operador al momento de que ocurra un sobrecalentamiento.
+        Dentro de esos componentes resaltan: un LOLIN32 Lite, resistencia, transistor, buzzer y leds para
+        dar aviso al operador, ademas de un sensor de temperatura para la lectura de la placa de potencia.
+        Por ultimo, se diseño un pequeño software para descargar el registro que se lleva de las 
+        temperaturas registradas en la placa de potencia.
+      </p>
+      <div class="galeria-fotos">
+        <img src="https://templates.blakadder.com/assets/device_images/wemos_LOLIN32_Lite_v1.webp" alt="ESP32 Lolin32 Lite" class="img-detalle">
+        <img src="https://i2celectronica.com/69-large_default/sensor-de-temperatura-ds18b20.jpg" alt="Sensor de Temperatura" class="img-detalle">
+        <img src="liebherr_software.png" alt="Software de Registro" class="img-detalle">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOcOHFVsuvLRFvNf3p4GqFEEmCCd5qlaOunYnxwGSBqm9pXotIG-k_Bng&s=10" alt="LEDs" class="img-detalle">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShco2BtSDMHRQnRfFCu4zZhA53xL97QWSGmlg4l085bUrVrsng-YVg_ROu&s=10" alt="Buzzer" class="img-detalle">
+        <img src="https://ecrobotics.com.bo/wp-content/uploads/2025/01/7.10-2N2222-Imagen-Referencial.jpg" alt="Transistor" class="img-detalle">   
+      </div>
+    </section>
+
+    <!-- Descarga de Documentación -->
+    <section class="seccion-descarga">
+      <h2>Documentación Completa</h2>
+      <a href="documentacion_proyecto.pdf" download class="boton-proyecto">
+        Descargar
+      </a>
+    </section>
+
+      <script>
+    const observador = new IntersectionObserver((entradas) => {
+      entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add('visible'); // Aparece al llegar a él
+        }
+      });
+    }, { threshold: 0.1 }); // Se activa cuando se asoma un 10% del elemento
+
+    // Le aplica el observador a todo lo que tenga la clase .animar-scroll
+    document.querySelectorAll('.animar-scroll').forEach((el) => observador.observe(el));
+  </script>
+
+  </main>
+
+</body>
+</html>
