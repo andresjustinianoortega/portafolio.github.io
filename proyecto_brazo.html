@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brazo robótico mecanizado</title>
+  <!-- Reutilizamos tu mismo archivo de estilos -->
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">  
+</head>
+<body>
+
+  <!-- Contenedor central -->
+  <main class="contenedor-principal" style="max-width: 800px; margin: 40px auto; padding: 20px;">
+    
+    <!-- Botón para regresar al inicio -->
+    <a href="index.html" class="boton-demo">Volver al inicio</a>
+
+    <h1>BRAZO ROBÓTICO MECANIZADO</h1>
+
+    <h2>Resumen del proyecto</h2>
+    <p style="line-height: 1.6; margin-bottom: 16px; text-align: justify;">
+      En la industria, cada vez es mas comun el uso de brazos robóticos para la automatización de procesos, 
+      ya que permiten realizar tareas repetitivas con gran precisión y eficiencia. Lo vemos en areas como la 
+      manufactura, ensamblaje, empaque y paletizado, entre otras.
+    </p>
+    <p style="line-height: 1.6; margin-bottom: 16px; text-align: justify;">
+      Es asi que el presente proyecto tiene como objetivo el desarrollo de un pequeño prototipo de brazo 
+      robótico mecanizado, que permita realizar tareas de manera automatizada y precisa. El enfoque esta
+      en objetos de pequeño tamaño y poco peso, por lo que el brazo robótico es de dimensiones reducidas y con un 
+      diseño compacto.
+    </p>
+
+    <h2>Tecnologías utilizadas</h2>
+    <ul style="padding-left: 20px; line-height: 1.8; margin-bottom: 24px;">
+      <li>Arduino Uno</li>
+      <li>C++</li>
+      <li>TinkerCAD</li>
+      <li>Servomotores</li>
+      <li>Componentes electrónicos</li>
+    </ul>
+
+  <!-- 1. Diseño -->
+    <section class="seccion-detalle animar-scroll">
+      <h2>Diseño y Estructura</h2>
+      <p style="text-align: justify;">
+        La estructura del brazo se penso imitando la forma de un brazo humano, con articulaciones y 
+        segmentos que permiten un rango de movimiento similar al de un brazo real. Para eso se maneja
+        con 4 grados de libertad, lo que permite realizar movimientos complejos y precisos. 
+        El diseño se realizo con 4 ejes principales que funcionan como:
+      </p>
+      <p style="text-align: justify;">
+        -  Eje 1: Rotación de la base, permite girar el brazo en torno a su eje vertical.
+      </p>
+      <p style="text-align: justify;">
+        - Eje 2: Movimiento del hombro, permite levantar y bajar el brazo.
+      </p>
+      <p style="text-align: justify;">
+        - Eje 3: Movimiento del codo, permite doblar y estirar el brazo.
+      </p>
+      <p style="text-align: justify;">
+        - Eje 4: Movimiento de la pinza, para sostener los objetos y manipularlos.
+      </p>
+      <div class="galeria-fotos animar-scroll">
+        <img src="brazo_estructura.jfif" alt="Estructura del brazo robótico" class="img-detalle">
+        <img src="boceto_estructural.jfif" alt="Boceto del brazo robótico" class="img-detalle">
+        </div>
+    </section>
+
+    <!-- 2. Electrónica y Componentes -->
+    <section class="seccion-detalle animar-scroll">
+      <h2>Electrónica y Circuito</h2>
+      <p style="text-align: justify;">
+        El diseño se realizo en el software TinkerCAD, donde se seleccionaron los componentes necesarios
+        para el funcionamiento del brazo robótico. Junto con el diseño del circuito, se realizaron 
+        pruebas de funcionamiento y ajustes finales para asegurar un correcto. Se utilizaron cables
+       y conectores adecuados para garantizar una buena conexión entre los componentes y evitar 
+       posibles fallas en el sistema.
+      </p>
+      <div class="galeria-fotos animar-scroll">
+        <img src="circuito_brazo.jfif" alt="Ciruito del Brazo" class="img-detalle">
+        <img src="esquematico.png" alt="Esquematico en TinkerCAD" class="img-detalle">
+      </div>
+    </section>
+
+    <!-- 3. Armado e Integración -->
+    <section class="seccion-detalle animar-scroll">
+      <h2>Componentes seleccionados</h2>
+      <p style="text-align: justify;">
+        Se seleccionaron los componentes necesarios para poder procesar toda la informacion del sistema, 
+        ademas de los servomotores que permiten el movimiento del brazo robótico. Se realizaron pruebas 
+        de funcionamiento y ajustes finales para asegurar un correcto y acertado funcionamiento del 
+        sistema. Se opto por un Arduino Uno como microcontrolador principal, debido a su facilidad de 
+        uso y compatibilidad con los servomotores. Ademas, se utilizo un software de control para 
+        programar el funcionamiento del brazo robótico. Se opto por usar un motor STEPPER para el movimiento 
+        de la base, ya que permite un control preciso de la posición y velocidad del brazo robótico.
+      </p>
+      <div class="galeria-fotos">
+        <img src="https://ecrobotics.com.bo/wp-content/uploads/2024/05/1.1-Arduino-UNO-R3-SMD-Imagen-Referencial.jpg" alt="Arduino Uno" class="img-detalle">
+        <img src="https://tienda.sawers.com.bo/image/cache/catalog/00301-500x500.jpg" alt="Servomotor" class="img-detalle">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCq3YVBuQR_wtQBfRQTBgBk3e9TNwScFglFwg4ykuavs0Z34mkF1-wtHR9&s=10" alt="Motor stepper" class="img-detalle">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScdIIEHzqpFAHUj0sw0j2uvvPdyUTpfOMtUbbYCk2qqYC-odNHSt0ZKFhI&s=10" alt="Protoboard" class="img-detalle">
+      </div>
+    </section>
+
+    <!-- Descarga de Documentación -->
+    <section class="seccion-descarga">
+      <h2>Documentación Completa</h2>
+      <a href="BRAZO_ROBOTICO_MECANIZADO.pdf" download class="boton-proyecto">
+        Descargar
+      </a>
+    </section>
+
+      <script>
+    const observador = new IntersectionObserver((entradas) => {
+      entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add('visible'); // Aparece al llegar a él
+        }
+      });
+    }, { threshold: 0.1 }); // Se activa cuando se asoma un 10% del elemento
+
+    // Le aplica el observador a todo lo que tenga la clase .animar-scroll
+    document.querySelectorAll('.animar-scroll').forEach((el) => observador.observe(el));
+  </script>
+
+  </main>
+
+</body>
+</html>
