@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mantenimiento autónomo</title>
+  <!-- Reutilizamos tu mismo archivo de estilos -->
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">  
+</head>
+<body>
+
+  <!-- Contenedor central -->
+  <main class="contenedor-principal" style="max-width: 800px; margin: 40px auto; padding: 20px;">
+    
+    <!-- Botón para regresar al inicio -->
+    <a href="index.html" class="boton-demo">Volver al inicio</a>
+
+    <h1>MANTENIMIENTO AUTÓNOMO</h1>
+
+    <h2>Resumen del proyecto</h2>
+    <p style="line-height: 1.6; margin-bottom: 16px; text-align: justify;">
+      En el area de envasado de una planta industrial, se busca que cada operador tenga la capacidad 
+      de realizar el mantenimiento de su area de trabajo, para ello se implemento un sistema de
+      control y monitoreo de las actividades de mantenimiento realizadas y completadas. Se elabora
+      un registro de las actividades realizadas, el cual es verificado y cruzado con la informacion
+      de los mantenimientos realizados en el area de trabajo, para asegurar que se cumpla con los 
+      procedimientos y protocolos establecidos.
+    </p>
+    <p style="line-height: 1.6; margin-bottom: 16px; text-align: justify;">
+      En este proyecto se implemento un sistema de control y monitoreo de las actividades de mantenimiento
+      realizadas y completadas en un area de trabajo de una planta industrial, utilizando Power BI para la 
+      recopilación de datos.
+    </p>
+
+    <h2>Tecnologías utilizadas</h2>
+    <ul style="padding-left: 20px; line-height: 1.8; margin-bottom: 24px;">
+      <li>Power BI</li>
+      <li>Excel</li>
+      <li>Dashboards</li>
+    </ul>
+
+  <!-- 1. Parametros -->
+    <section class="seccion-detalle animar-scroll">
+      <h2>Parámetros</h2>
+      <p style="text-align: justify;">
+        Primero, se analiza que porcentaje de actividades de mantenimiento cuentan con información 
+        correspondiente y a que area corresponde, ya sean actividades de lubricacion, seguridad,
+        limpieza y orden, entre otras. Se realiza un registro de las actividades realizadas y completadas,
+        para luego ser verificado y cruzado con la informacion de los mantenimientos generales que
+        deberian realizarse en el area de trabajo.
+      </p>
+      <div class="galeria-fotos animar-scroll">
+        <img src="adherencia.png" alt="Adherencia por PM ID" class="img-detalle">
+        <img src="riesgo.png" alt="Análisis por riesgo" class="img-detalle">
+        </div>
+    </section>
+
+    <!-- 2. Tabla -->
+    <section class="seccion-detalle animar-scroll">
+      <h2>Tabla de Actividades</h2>
+      <p style="text-align: justify;">
+        La tabla de actividades permite visualizar todas las tareas que corresponden a una maquina
+        en especifico, es por eso que tambien se añade un selector de maquina. En la tabla se ve
+        la información detallada de cada tarea y si se encuentra aplicada o no en el sistema
+        para que el operador pueda realizar el mantenimiento correspondiente.
+      </p>
+      <div class="galeria-fotos animar-scroll">
+        <img src="selector_de_maquina.png" alt="Seleccionar maquina" class="img-detalle">
+        <img src="tabla_comparacion.png" alt="Tabla de Comparación" class="img-detalle">
+      </div>
+    </section>
+
+    <!-- 3. Dashboard completo -->
+    <section class="seccion-detalle animar-scroll">
+      <h2>Dashboard</h2>
+      <p style="text-align: justify;">
+        Se realiza un dashboard completo con toda la informacion recopilada, donde se puede visualizar
+        el porcentaje de actividades de mantenimiento realizadas y completadas, asi como el porcentaje de 
+        actividades que cuentan con informacion correspondiente y a que area corresponde. Tambien, se añade
+        una opcion para seleccionar la maquina a analizar, para asi poder visualizar la informacion 
+        correspondiente a cada una de ellas. Finalmente, se implementa una tabla para realizar la 
+        evaluación y comparación de las actividades de mantenimiento realizadas y completadas.
+      <div class="contenedor-centrado animar-scroll">
+        <img src="dashboard.png" alt="Dashboard Power BI">
+       </div>
+    </section>
+
+      <script>
+    const observador = new IntersectionObserver((entradas) => {
+      entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add('visible'); // Aparece al llegar a él
+        }
+      });
+    }, { threshold: 0.1 }); // Se activa cuando se asoma un 10% del elemento
+
+    // Le aplica el observador a todo lo que tenga la clase .animar-scroll
+    document.querySelectorAll('.animar-scroll').forEach((el) => observador.observe(el));
+  </script>
+
+  </main>
+
+</body>
+</html>
